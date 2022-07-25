@@ -21,6 +21,13 @@
                 die('Erreur : ' .$conn->connect_error);
             }
             echo 'Connexion réussie';
+
+            $sth = $dbco->prepare("SELECT * FROM LigComm");
+            $sth->execute();
+            $resultat = $sth->fetchAll(PDO::FETCH_ASSOC);
+            echo '<pre>';
+            print_r($resultat);
+            echo '</pre>';
         ?>
     </body>
 </html>
