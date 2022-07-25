@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>Afficher la table users</head>
-<body>
-<?php
-  $host = '10.101.5.223';
-  $dbname = 'TEST';
-  $username = 'root';
-  $password = 'QOwT0cwp7d';
-    
-  
-  $conn =  new mysqli($host, $username, $password, $dbname) ;
-  if($conn->connect_errno){
-      printf("Connect failed: %s\n", $conn->connect_error);
-  }
-
-  $sql = "SELECT * FROM LigComm";
-  $result = mysql_query($sql)
-  
-  echo '<table border="1"><thead><tr>';
- 
-	while ($row3 = mysql_fetch_array($combo3)) 
- 
-		{
-			echo '<th > ' . $row3[0] . '</th>' ;
-		}
- 
-echo '</tr>';
-
-  ?>
-
- <h1>Liste des utilisateurs</h1>
- <table>
-   <thead>
-     <tr>
-       <th>ID</th>
-       <th>Name</th>
-     </tr>
-   </thead>
-   <tbody>
-     <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-     <tr>
-       <td><?php echo htmlspecialchars($row['id']); ?></td>
-       <td><?php echo htmlspecialchars($row['name']); ?></td>
-     </tr>
-     <?php endwhile; ?>
-   </tbody>
- </table>
-</body>
+    <head>
+        <title>Cours PHP / MySQL</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="cours.css">
+    </head>
+    <body>
+        <h1>Bases de données MySQL</h1>  
+        <?php
+            $host = '10.101.5.223';
+            $dbname = 'TEST';
+            $username = 'root';
+            $password = 'QOwT0cwp7d';
+            
+            //On établit la connexion
+            $conn = new mysqli($servername, $username, $password);
+            
+            //On vérifie la connexion
+            if($conn->connect_error){
+                die('Erreur : ' .$conn->connect_error);
+            }
+            echo 'Connexion réussie';
+        ?>
+    </body>
 </html>
