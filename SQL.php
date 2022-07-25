@@ -1,5 +1,5 @@
 <?php
-  $host = 'https://node101579-env-9699007.jcloud-ver-jpe.ik-server.com/';
+  $host = '10.101.5.223';
   $dbname = 'TEST';
   $username = 'root';
   $password = 'QOwT0cwp7d';
