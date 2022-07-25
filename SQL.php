@@ -19,6 +19,8 @@
   }catch (PDOException $e){
     echo $e->getMessage();
   }
+  $results = mysqli_query($sql);
+  var_dump($results);
 ?>
 <!DOCTYPE html>
 <html>
