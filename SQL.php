@@ -4,23 +4,19 @@
   $username = 'root';
   $password = 'QOwT0cwp7d';
     
-  $dsn = "mysql:host=$host;dbname=$dbname"; 
-  // récupérer tous les utilisateurs
-  $sql = "SELECT * FROM LigComm";
-   
-  try{
-   $pdo = new PDO($dsn, $username, $password);
-   $stmt = $pdo->query($sql);
-   
-   if($stmt === false){
-    die("Erreur");
-   }
-   
-  }catch (PDOException $e){
-    echo $e->getMessage();
-  }
-  $results = mysqli_query($sql);
-  var_dump($results);
+  
+$conn =  new mysqli($host, $username, $password, $dbname) ;
+if($conn->connect_errno){
+    printf("Connect failed: %s\n", $conn->connect_error);
+    exit();
+}
+
+$sql = "SELECT * FROM LigComm";
+
+$result = $conn->query(sql)
+or trigger_error($conn->error);
+$row = $result->fetch_array(MYSQL_BOTH);
+echo $row[1]; //or echo $row[1]
 ?>
 <!DOCTYPE html>
 <html>
