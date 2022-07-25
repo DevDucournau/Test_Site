@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head>Afficher la table users</head>
+<body>
 <?php
   $host = '10.101.5.223';
   $dbname = 'TEST';
@@ -24,10 +28,7 @@
 echo '</tr>';
 
   ?>
-<!DOCTYPE html>
-<html>
-<head>Afficher la table users</head>
-<body>
+
  <h1>Liste des utilisateurs</h1>
  <table>
    <thead>
