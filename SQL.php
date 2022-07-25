@@ -11,6 +11,18 @@
   }
 
   $sql = "SELECT * FROM LigComm";
+  $result = mysql_query($sql)
+  
+  echo '<table border="1"><thead><tr>';
+ 
+	while ($row3 = mysql_fetch_array($combo3)) 
+ 
+		{
+			echo '<th > ' . $row3[0] . '</th>' ;
+		}
+ 
+echo '</tr>';
+
   ?>
 <!DOCTYPE html>
 <html>
