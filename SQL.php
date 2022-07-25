@@ -19,7 +19,7 @@
               $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               
               /*Sélectionne toutes les valeurs dans la table users*/
-              $sth = $dbco->prepare("SELECT * FROM users");
+              $sth = $dbco->prepare("SELECT * FROM LigComm");
               $sth->execute();
               
               /*Retourne un tableau associatif pour chaque entrée de notre table
