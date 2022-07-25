@@ -5,19 +5,13 @@
   $password = 'QOwT0cwp7d';
     
   
-$conn =  new mysqli($host, $username, $password, $dbname) ;
-if($conn->connect_errno){
-    printf("Connect failed: %s\n", $conn->connect_error);
-    exit();
-}
+  $conn =  new mysqli($host, $username, $password, $dbname) ;
+  if($conn->connect_errno){
+      printf("Connect failed: %s\n", $conn->connect_error);
+  }
 
-$sql = "SELECT * FROM LigComm";
-
-$result = $conn->query(sql)
-or trigger_error($conn->error);
-$row = $result->fetch_array(MYSQL_BOTH);
-echo $row[1]; //or echo $row[1]
-?>
+  $sql = "SELECT * FROM LigComm";
+  ?>
 <!DOCTYPE html>
 <html>
 <head>Afficher la table users</head>
