@@ -13,21 +13,29 @@
             $username = 'root';
             $password = 'QOwT0cwp7d';
             
-            //On établit la connexion
-            $conn = new PDO("mysql:host=$host; dbname=$dbname",$username, $password);
-            
-            //On vérifie la connexion
-            if($conn->connect_error){
-                die('Erreur : ' .$conn->connect_error);
-            }
-            echo 'Connexion réussie';
 
-            $sth = $dbco->prepare("SELECT * FROM LigComm");
-            $sth->execute();
-            $resultat = $sth->fetchAll(PDO::FETCH_ASSOC);
-            echo '<pre>';
-            print_r($resultat);
-            echo '</pre>';
-        ?>
-    </body>
+            try{
+              $dbco = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+              $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              
+              /*Sélectionne toutes les valeurs dans la table users*/
+              $sth = $dbco->prepare("SELECT * FROM users");
+              $sth->execute();
+              
+              /*Retourne un tableau associatif pour chaque entrée de notre table
+               *avec le nom des colonnes sélectionnées en clefs*/
+              $resultat = $sth->fetchAll(PDO::FETCH_ASSOC);
+              
+              /*print_r permet un affichage lisible des résultats,
+               *<pre> rend le tout un peu plus lisible*/
+              echo '<pre>';
+              print_r($resultat);
+              echo '</pre>';
+          }
+                
+          catch(PDOException $e){
+              echo "Erreur : " . $e->getMessage();
+          }
+      ?>
+  </body>
 </html>
