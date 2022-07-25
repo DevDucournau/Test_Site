@@ -14,7 +14,7 @@
             $password = 'QOwT0cwp7d';
             
             //On établit la connexion
-            $conn = new mysqli($servername, $username, $password);
+            $conn = new mysqli($host, $username, $password);
             
             //On vérifie la connexion
             if($conn->connect_error){
