@@ -37,5 +37,6 @@
               echo "Erreur : " . $e->getMessage();
           }
       ?>
+      <hi><a href="10.101.14.167/data/invoice.pdf">fichier</a>
   </body>
 </html>
