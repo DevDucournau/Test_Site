@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1>Bases de données MySQL</h1>  
+        <hi><a href="10.101.14.167/data/invoice.pdf">fichier</a>
         <?php
             $host = '10.101.5.223';
             $dbname = 'TEST';
