@@ -11,7 +11,7 @@
             $host = '10.101.5.223';
             $dbname = 'TEST';
             $username = 'root';
-            $password = 'QOwT0cwp7d';
+            $password = 'FNIRgwOSwD';
             
 
             try{
