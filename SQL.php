@@ -7,12 +7,15 @@
     </head>
     <body>
         <h1>Bases de données MySQL</h1>  
-        <hi><a href="10.101.14.167/data/invoice.pdf">fichier</a>
+        <hi><a href="10.101.7.235/data/">fichier</a>
+        <hi><a href="10.101.7.235/data/TEST_CMR/">fichier</a>
+        <hi><a href="10.101.7.235/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4">fichier</a>
+        <hi><a href="10.101.2.51/var/lib/jelastic/CMR/TEST 2/">fichier</a>
         <?php
-            $host = '10.101.5.223';
+            $host = '10.101.2.51';
             $dbname = 'TEST';
             $username = 'root';
-            $password = 'FNIRgwOSwD';
+            $password = 'VQKtly58131';
             
 
             try{
