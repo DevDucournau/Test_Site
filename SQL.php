@@ -8,10 +8,15 @@
     <body>
         <h1>Bases de données MySQL</h1>  
         <hi><a href="10.101.7.235/data/TEST_CMR/Flotte Ducournau.xlsx">fichier</a>
+
+    <video controls>
+        <source src="10.101.7.235/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4" type="video/mp4"/>
+    </video>
+
         <hi><a href="10.101.7.235/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4">fichier</a>
         <?php
             $host = '10.101.2.51';
-            $dbname = 'TEST';
+            $dbname = 'DUCOURNAU';
             $username = 'root';
             $password = 'VQKtly58131';
             
@@ -21,7 +26,7 @@
               $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               
               /*Sélectionne toutes les valeurs dans la table users*/
-              $sth = $dbco->prepare("SELECT * FROM LigComm");
+              $sth = $dbco->prepare("SELECT * FROM Test");
               $sth->execute();
               
               /*Retourne un tableau associatif pour chaque entrée de notre table
