@@ -10,10 +10,10 @@
         <hi><a href="10.101.7.235/data/TEST_CMR/Flotte Ducournau.xlsx">fichier</a>
 
     <video controls>
-        <source src="10.101.7.235/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4" type="video/mp4"/>
+        <source src="/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4" type="video/mp4"/>
     </video>
 
-        <hi><a href="10.101.2.51/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4">fichier</a>
+        <hi><a href="/data/TEST_CMR/Lefa - Bitch (Clip officiel) ft. Vald.mp4">fichier</a>
         <?php
             $host = '10.101.2.51';
             $dbname = 'DUCOURNAU';
